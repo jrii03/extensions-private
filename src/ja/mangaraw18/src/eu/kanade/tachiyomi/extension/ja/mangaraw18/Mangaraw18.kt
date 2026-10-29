@@ -13,9 +13,10 @@ import java.time.format.DateTimeFormatter
 import java.util.Locale
 
 @Source
-abstract class mangaraw18 : WPComics() {
+abstract class Mangaraw18 : WPComics() {
 
-    override val dateFormat: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'", Locale.JAPANESE)
+    override val dateFormat: DateTimeFormatter =
+        DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'", Locale.JAPANESE)
 
     override val gmtOffset = null
     override val searchPath = "search/manga"
