@@ -34,8 +34,7 @@ rootProject.name = "Keiyoushi"
  * PENGATURAN EKSTENSI KAMU:
  * Mematikan load massal, dan hanya memuat ekstensi mangaraw18 (Bahasa: ja)
  */
-// loadAllIndividualExtensions() <-- Dimatikan dengan menambahkan tanda komentar (//)
-loadIndividualExtension("ja", "mangaraw18") // <-- Dinyalakan khusus untuk ekstensimu
+loadAllIndividualExtensions()
 
 /**
  * ===================================== COMMON CONFIGURATION ======================================
