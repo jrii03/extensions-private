@@ -31,10 +31,11 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "Keiyoushi"
 
 /**
- * Add or remove modules to load as needed for local development here.
+ * PENGATURAN EKSTENSI KAMU:
+ * Mematikan load massal, dan hanya memuat ekstensi mangaraw18 (Bahasa: ja)
  */
-loadAllIndividualExtensions()
-// loadIndividualExtension("all", "mangadex")
+// loadAllIndividualExtensions() <-- Dimatikan dengan menambahkan tanda komentar (//)
+loadIndividualExtension("ja", "mangaraw18") // <-- Dinyalakan khusus untuk ekstensimu
 
 /**
  * ===================================== COMMON CONFIGURATION ======================================
@@ -42,10 +43,8 @@ loadAllIndividualExtensions()
 include(":core")
 include(":compiler")
 
-// Load all modules under /lib
+// Load semua modul pendukung
 File(rootDir, "lib").eachDir { include("lib:${it.name}") }
-
-// Load all modules under /lib-multisrc
 File(rootDir, "lib-multisrc").eachDir { include("lib-multisrc:${it.name}") }
 
 /**
@@ -58,6 +57,7 @@ fun loadAllIndividualExtensions() {
         }
     }
 }
+
 fun loadIndividualExtension(lang: String, name: String) {
     include("src:$lang:$name")
 }
